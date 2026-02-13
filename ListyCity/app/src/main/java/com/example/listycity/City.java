@@ -56,6 +56,7 @@ public class City implements Comparable<City> {
      * @param obj   the reference object with which to compare.
      * @return true if this object is the same as the obj argument; false otherwise.
      */
+    @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -67,7 +68,7 @@ public class City implements Comparable<City> {
         return Objects.equals(this.city, other.city) &&
                 Objects.equals(this.province, other.province);
     }
-
+    @Override
     public int hashCode() {
         return Objects.hash(city, province);
     }

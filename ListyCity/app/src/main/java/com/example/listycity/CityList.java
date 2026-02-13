@@ -28,5 +28,32 @@ public class CityList {
         Collections.sort(list);
         return list;
     }
+    /**
+     * This checks if a city is in the list
+     * @param city
+     * This is a candidate city to check
+     * */
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
+    /**
+     * This deletes a city from the list
+     * @param city
+     * This is a candidate city to delete
+     */
+    public void delete(City city) {
+        if (!cities.contains(city)) {
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
+    }
+    /**
+     * This counts the number of cities in the list
+     * @return the number of cities in the list
+     */
+    public int countCities() {
+        return cities.size();
+    }
+
 }
 
